@@ -1,0 +1,94 @@
+
+html {
+    font-family: Inter;
+    font-size: 14px;
+}
+
+/* Utility Classes */
+.align {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+/* End */
+
+.top-section {
+    margin-top: 2rem;
+    height: 80px;
+    position: relative;
+}
+
+.search-icon {
+    font-size: 1.5rem;
+
+}
+
+.home-title {
+    font-size: 2.4rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    position: absolute;
+    left: 40%;
+}
+
+.right-top-section {
+    font-size: 1.2rem;
+    font-weight: 600;
+    gap: 1.2rem;   
+    text-transform: uppercase;
+    color: grey; 
+}
+
+.subscribe {
+    padding: 0.5rem 0.7rem;
+    background-color: rgb(1,43,254);
+    border-radius: 1.2rem;
+    color: white;
+}
+
+.bottom-section {
+    height: 56px;
+    margin: 0 auto;
+}
+
+.navigation-links {
+    width: 889px;
+    list-style: none;
+    text-align: center;
+    font-size: 1.2rem;
+    margin: 0;
+    padding: 0;
+}
+
+.navigation-links li {
+    display: inline;
+    text-transform: uppercase;
+    padding-right: 2rem;
+}
+
+.navigation-links li:last-child {
+    padding-right: 0;
+}
+a:hover {
+    cursor: pointer;
+}
+ a {
+    text-decoration: none;
+    color: grey;
+
+ }
