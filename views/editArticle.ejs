@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Create Article</title>
+        <link rel="stylesheet" href="/stylesheets/style.css">
+    </head>
+    <body>
+        <div class="center">
+            <h1 class="page-title">Create An Article</h1>
+            <form action="/articles/edit/<%=message._id%>" method="post">
+                <div class="form-item">
+                    <label for="title">Title:
+                    </label>
+                    <input type="text" name="title" id="title" value=<%=message.title%>>
+                </div>
+
+                <div class="form-item">
+                    <label for="description">Description:
+                    </label>
+                    <textarea name="description" id="description" cols="30" rows="10" ><%=message.description%></textarea>
+                </div>
+
+                <div class="form-item">
+                    <label for="tags">Tags:</label>
+                    <select name="tags" id="tags" multiple >
+                        <option value="option1" <%= message.tags.includes(`option1`) ? "selected" : "" %>>Option1</option>
+                        <option value="option2" <%= message.tags.includes(`option2`) ? "selected" : "" %>>Option2</option>
+                        <option value="option3" <%= message.tags.includes(`option3`) ? "selected" : "" %>>Option3</option>
+                        <option value="option4" <%= message.tags.includes(`option4`) ? "selected" : "" %>>Option4</option>
+                        <option value="option5" <%= message.tags.includes(`option5`) ? "selected" : "" %>>Option5</option>
+                        <option value="option6" <%= message.tags.includes(`option6`) ? "selected" : "" %>>Option6</option>
+                    </select><br>
+                </div>
+
+                <div class="form-item">
+                    <label for="author">Author:</label>
+                    <input type="text" name="author" id="author" value=<%=message.author%>>
+                </div>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </body>
+</html>

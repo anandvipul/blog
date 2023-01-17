@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>All Article</title>
+        <link rel="stylesheet" href="/stylesheets/style.css">
+    </head>
+    <body>
+        <div class="center">
+            <div class="header">
+                <h1>Articles Gallery</h1>
+                <div class="flex-row">
+                    <h3><a href="/articles/new">Create New </a></h3>
+                    <h3>   |   </h3>
+                    <h3><a href="/">Home</a></h3>
+                </div>
+            </div>
+            <ul>
+                <% list.forEach((item) => { %>
+                    <li>
+                        <div class="article-single">
+                            <h2><%= item.title %></h2>
+                            <p><%=item.description %></p>
+                            <div>
+                                <span class="likes">Likes:
+                                    <%=item.likes%></span>
+                            </div>
+                            <div>
+                                <button class="upvote" data-id=<%= item._id %>>👍</button>
+                                <button class="downvote" data-id=<%= item._id %>>👎</button>
+                            </div>
+                            <div>
+                                <input hidden type="text" name="id" id="id" value=<%= item._id %>>
+                                <button class="edit" data-id=<%= item._id %>>Edit</button>
+                                <button class="delete" data-id=<%= item._id %>>Delete</button>
+                            </div>
+                        </div>
+                    </li>
+                <% }); %>
+            </ul>
+        </div>
+
+        <script>
+
+            function postEdit(target) { // Data
+                
+                let id = target.getAttribute("data-id");
+                
+                let url = "/articles/edit/" + id;
+                console.log(url);
+
+                location.href = url;
+            }
+
+            function postDelete(target) {
+                let id = target.getAttribute("data-id");
+                
+                let url = "/articles/delete/" + id;
+                console.log(url);
+
+                location.href = url;
+            }
+
+            function upVote(target) {
+                let id = target.getAttribute("data-id");
+                
+                let url = "/articles/upvote/" + id;
+                console.log(url);
+
+                location.href = url;
+            }
+
+            function downVote(target) {
+                let id = target.getAttribute("data-id");
+                
+                let url = "/articles/downvote/" + id;
+                console.log(url);
+
+                location.href = url;
+            }
+
+            let buttonDownvote = document.querySelectorAll(".downvote");
+            Array.from(buttonDownvote).forEach((item) => {
+                item.addEventListener("click", (event) => {
+                    downVote(event.target);
+                });
+            });
+
+            let buttonUpvote = document.querySelectorAll(".upvote");
+            Array.from(buttonUpvote).forEach((item) => {
+                item.addEventListener("click", (event) => {
+                    upVote(event.target);
+                });
+            });
+
+
+
+            let buttonEdit = document.querySelectorAll(".edit");
+            Array.from(buttonEdit).forEach((item) => {
+                item.addEventListener("click", (event) => {
+                    postEdit(event.target);
+                });
+            });
+            
+
+            let buttonDelete = document.querySelectorAll(".delete");
+            Array.from(buttonDelete).forEach((item) => {
+                item.addEventListener("click", (event) => {
+                    postDelete(event.target);
+                });
+            });
+        </script>
+        <!-- <script src="/javascripts/script.js"></script> -->
+    </body>
+</html>
