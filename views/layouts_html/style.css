@@ -15,6 +15,12 @@ h1, h2, h3, h4, h5, p {
     margin: 0 auto 10rem;
 }
 
+.main-divider {
+    display: grid;
+    grid-template-columns: 640px 320px;
+    line-height: 25.6px;
+}
+
 .flex {
     display: flex;
     justify-content: space-between;
@@ -211,9 +217,97 @@ a:hover {
  }
 
  .sidebar {
+    max-width: 340px;
     font-size: 14px;
     display: block;
     height: 890px;
     line-height: 22.4px;
     padding-left: 40px;
+    position: sticky;
+    top: 48px;
+ }
+
+ .section-title {
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.12px;
+    line-height: 13.8px;
+    margin-bottom: 24px;
+    text-transform: uppercase;
+ }
+
+ .logo-img {
+    width: 64px;
+    height: 64px;
+    background-color: red;
+ }
+
+ .about-wrapper {
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    justify-content: center;
+    line-height: 22.4px;
+    height: 64px;
+ }
+
+ .section-about {
+    font-size: 14px;
+    line-height: 22.4px;
+    display: flex;
+ }
+
+ .sidebar-signup {
+    margin-top: 28px;
+    font-size: 14px;
+    line-height: 22.4px;
+ }
+
+ .sidebar-section {
+    margin-top: 80px;
+ }
+
+ .sidebar-section:first-of-type {
+    margin-top: 0;
+ }
+
+ .sidebar-article-title {
+    font-size: 19px;
+    letter-spacing: -0.19px;
+    line-height: 23.75px;
+    font-weight: 600;
+ }
+
+ .sidebar-article-description {
+    font-size: 14px;
+    line-height: 21.7px;
+    margin-top: 8px;
+ }
+
+ .sidebar-feed-article {
+    margin-top: 28px;
+ }
+
+ .sidebar-feed-article:first-of-type {
+    margin-top: 0;
+ }
+
+ .topic-count {
+    display: block;
+ }
+.topic-name {
+    color: black;
+}
+ .sidebar-topic-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    line-height: 22.4px;
+    margin-top: 16px;
+ }
+
+ .sidebar-topic-item:first-of-type {
+    margin-top: 0;
  }
