@@ -1,0 +1,370 @@
+
+html {
+    font-family: Inter;
+    font-size: 12px;
+}
+
+h1, h2, h3, h4, h5, p {
+    margin: 0;
+}
+
+
+/* Utility Classes */
+.align {
+    max-width: 1000px;
+    margin: 0 auto 10rem;
+}
+
+.main-divider {
+    display: grid;
+    grid-template-columns: 640px 320px;
+    line-height: 25.6px;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.seperator-margin {
+    margin: 2rem 0;
+}
+
+/* End */
+
+.top-section {
+    margin-top: 2rem;
+    height: 80px;
+    position: relative;
+}
+
+.search-icon {
+    font-size: 1.5rem;
+
+}
+
+.home-title {
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: -0.48px;
+    position: absolute;
+    left: 40%;
+}
+
+.right-top-section {
+    font-size: 12px;
+    font-weight: 600;
+    gap: 1.2rem;   
+    text-transform: uppercase;
+    color: grey; 
+}
+
+.subscribe {
+    padding: 0.8rem;
+    background-color: rgb(1,43,254);
+    border-radius: 1.4rem;
+    color: white;
+}
+
+.bottom-section {
+    height: 56px;
+    margin: 0 auto;
+}
+
+.navigation-links {
+    width: 889px;
+    list-style: none;
+    text-align: center;
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+}
+
+.navigation-links li {
+    display: inline;
+    text-transform: uppercase;
+    padding-right: 2rem;
+}
+
+.navigation-links li:last-child {
+    padding-right: 0;
+}
+a:hover {
+    cursor: pointer;
+}
+ a {
+    text-decoration: none;
+    color: grey;
+
+ }
+
+.recent-post-title {
+    font-size: 74px;
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: -1.48px;
+}
+
+ .recent-post-body {
+    font-size: 28px;
+    line-height: 37.8px;
+    margin-top: 16px;
+    word-break: break-word;
+ }
+
+
+ .span-recent-tag {
+    color: blue;
+    
+    display: block;
+        text-transform: uppercase;
+ }
+
+.recent-article-tag-header {
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+ .recent-post-span-read {
+    font-size: 12px;
+    text-transform: uppercase;
+    margin-top: 24px;
+    font-weight: 500;
+    display: block;
+    color: grey;
+ }
+
+.more-issue {
+    font-size: 16px;
+    line-height: 25.6px;
+    max-width: 720px;
+}
+
+ .more-issue-title {
+    display: block;
+    font-size: 12px;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+    letter-spacing: 0.12px;
+ }
+
+ .home-article-title {
+    font-size: 34px;
+    letter-spacing: -0.68px;
+    line-height: 39.1px;
+    font-weight: 600;
+ }
+
+ .home-article-body {
+    font-size: 18px;
+    line-height: 27px;
+    margin-top: 12px;
+    letter-spacing: -0.18px;
+
+ }
+.date-tag {
+    color: blue;
+    display: block;
+}
+
+.center-dot{
+    display: block;
+    position: relative;
+    bottom: 4px;
+}
+.span-read {
+    display: block;
+}
+
+.span-star {
+    display: block;
+    position: relative;
+    top: 2px;
+    font-weight: 700;
+}
+ .article-footer {
+    display: flex;
+    margin-top: 20px;
+    line-height: 12px;
+    font-size: 12px;
+    gap: 5px;
+    text-transform: uppercase;
+    align-items: center;
+    justify-content: flex-start;
+    font-weight: 500;
+    color: grey;
+ }
+
+ .home-article-item {
+    margin-top: 80px;
+    font-size: 16px;
+    line-height: 25.6px;
+ }
+
+ .home-article-item:first-of-type {
+    margin-top: 0;
+ }
+
+ .sidebar {
+    max-width: 340px;
+    font-size: 14px;
+    display: block;
+    height: 890px;
+    line-height: 22.4px;
+    padding-left: 40px;
+    position: sticky;
+    top: 48px;
+ }
+
+ .section-title {
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.12px;
+    line-height: 13.8px;
+    margin-bottom: 24px;
+    text-transform: uppercase;
+ }
+
+ .logo-img {
+    width: 64px;
+    height: 64px;
+    background-color: red;
+ }
+
+ .about-wrapper {
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    justify-content: center;
+    line-height: 22.4px;
+    height: 64px;
+ }
+
+ .section-about {
+    font-size: 14px;
+    line-height: 22.4px;
+    display: flex;
+ }
+
+ .sidebar-signup {
+    margin-top: 28px;
+    font-size: 14px;
+    line-height: 22.4px;
+ }
+
+ .sidebar-section {
+    margin-top: 80px;
+ }
+
+ .sidebar-section:first-of-type {
+    margin-top: 0;
+ }
+
+ .sidebar-article-title {
+    font-size: 19px;
+    letter-spacing: -0.19px;
+    line-height: 23.75px;
+    font-weight: 600;
+ }
+
+ .sidebar-article-description {
+    font-size: 14px;
+    line-height: 21.7px;
+    margin-top: 8px;
+ }
+
+ .sidebar-feed-article {
+    margin-top: 28px;
+ }
+
+ .sidebar-feed-article:first-of-type {
+    margin-top: 0;
+ }
+
+ .topic-count {
+    display: block;
+ }
+.topic-name {
+    color: black;
+}
+ .sidebar-topic-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    line-height: 22.4px;
+    margin-top: 16px;
+ }
+
+ .sidebar-topic-item:first-of-type {
+    margin-top: 0;
+ }
+
+
+ .subscribe-section {
+    background-color: blue;
+    font-size: 16px;
+    line-height: 25.6px;
+    text-align: center;
+    margin: 120px auto 80px;
+    max-width: 1000px;
+    color: white;
+ }
+
+ .outer {
+    padding: 66px 36px;
+    max-width: 520px;
+    margin: 0 auto;
+ }
+
+ .subscribe-title {
+    font-size: 36px;
+    font-weight: 700;
+ }
+
+ .subscribe-description {
+    font-size: 19px;
+    line-height: 26.6px;
+    margin-top: 20px;
+ }
+
+ .subscribe-field {
+    height: 56px;
+    margin: 48px auto 8px;
+    line-height: 25.6px;
+    background-color: white;
+    max-width: 340px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+ }
+
+ .subscribe-footer {
+    color: blue;
+    text-transform: uppercase;
+    padding-right: 8px;
+ }
+
+ #email {
+    border: none;
+    padding-left: 8px;
+    margin-left: 5px;
+ }
+
+.foot-menu .nav li{
+    display: inline;
+    margin-right: 10px;
+}
