@@ -311,3 +311,60 @@ a:hover {
  .sidebar-topic-item:first-of-type {
     margin-top: 0;
  }
+
+
+ .subscribe-section {
+    background-color: blue;
+    font-size: 16px;
+    line-height: 25.6px;
+    text-align: center;
+    margin: 120px auto 80px;
+    max-width: 1000px;
+    color: white;
+ }
+
+ .outer {
+    padding: 66px 36px;
+    max-width: 520px;
+    margin: 0 auto;
+ }
+
+ .subscribe-title {
+    font-size: 36px;
+    font-weight: 700;
+ }
+
+ .subscribe-description {
+    font-size: 19px;
+    line-height: 26.6px;
+    margin-top: 20px;
+ }
+
+ .subscribe-field {
+    height: 56px;
+    margin: 48px auto 8px;
+    line-height: 25.6px;
+    background-color: white;
+    max-width: 340px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+ }
+
+ .subscribe-footer {
+    color: blue;
+    text-transform: uppercase;
+    padding-right: 8px;
+ }
+
+ #email {
+    border: none;
+    padding-left: 8px;
+    margin-left: 5px;
+ }
+
+.foot-menu .nav li{
+    display: inline;
+    margin-right: 10px;
+}
