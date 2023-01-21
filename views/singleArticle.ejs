@@ -1,22 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= article.title %></title>
-</head>
-<body>
-    <div class="center">
-        <h1 class="article-title"><%=article.title%></h1>
-        <p class="description"><%=article.description%></p>
-        <ul>
-            <% article.tags.forEach((item) => { %>
-                <li> <%= item %></li>
-          <%  });  %>
-        </ul>
-        <h3><% article.author %></h3>
-        
-    </div>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title><%= article.title %></title>
+        <link rel="stylesheet" href="/stylesheets/style.css">
+    </head>
+    <body>
+        <div class="center">
+            <h1 class="article-title"><%=article.title%></h1>
+            <p class="description"><%=article.description%></p>
+            <ul>
+                <% article.tags.forEach((item) => { %>
+                    <li>
+                        <%= item %></li>
+                <%  });  %>
+            </ul>
+            <h3><%= article.author %></h3>
+
+            <hr>
+            <h2>Comments</h2>
+            <div class="comments-container">
+                <div class="add-comments">
+
+                    <form action="/articles/<%= article._id %>/comment/add" method="POST">
+                        <textarea name="comment" id="comment" cols="30" rows="10">Add your comment here</textarea>
+                        <div>
+                            <button type="submit" data-id=<%= article._id %>>Add</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="comment-section">
+                    <% comments.forEach((item) => {  %>
+                        <article class="comment">
+                            <p class="comment-text"><%= item.content%></p>
+                            
+                                <button type="submit" class="delete-comment" data-id="<%=item._id%>" data-article-id="<%=article._id%>">Delete</button>
+                                <button type="submit" class="edit-button" data-id="<%=item._id%>" data-article-id="<%=article._id%>">Edit</button>
+                            
+                        </article>
+                    <% })%>
+                </div>
+            </div>
+
+        </div>
+
+        <script>
+            let deleteButton = document.querySelectorAll(".delete-comment");
+            let editButton = document.querySelectorAll(".edit-button");
+
+            Array.from(deleteButton).forEach((item) => {
+                item.addEventListener("click", (event) => {onDelete(event)});
+            });
+
+            function onDelete(event) {
+                let id = event.target.getAttribute("data-id");
+                let artId = event.target.getAttribute("data-article-id");
+                console.log(id);
+                
+                let xhrDelete = new XMLHttpRequest();
+                xhrDelete.open("POST", "/articles/comments/delete", true);
+                xhrDelete.setRequestHeader("content-type", 'application/json');
+                xhrDelete.send(JSON.stringify({
+                    "commentId": id,
+                    "articleId": artId
+                }));
+                xhrDelete.onload = () => {
+                    location.href = "/articles/"+`${artId}`;
+                };
+            }
+        </script>
+    </body>
 </html>

@@ -21,7 +21,7 @@
                 <% list.forEach((item) => { %>
                     <li>
                         <div class="article-single">
-                            <h2><%= item.title %></h2>
+                            <h2><a href=<%= `/articles/${item._id}` %>><%= item.title %></a></h2>
                             <p><%=item.description %></p>
                             <div>
                                 <span class="likes">Likes:
@@ -37,6 +37,7 @@
                                 <button class="delete" data-id=<%= item._id %>>Delete</button>
                             </div>
                         </div>
+                        
                     </li>
                 <% }); %>
             </ul>
